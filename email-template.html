@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Email</title>
+	<style>
+		body {
+			max-width: 1000px;
+			margin: 0 auto;
+			padding: 0;
+			background-color: #F2F0EC;
+			font-family: 'GillSans Light', 'GillSans', 'Helvitica Neue', Arial;
+		}
+
+		p {
+			margin: 0px;
+		}
+
+		.top-link {
+			text-align: center;
+			margin: 60px 0 15px 0;
+			color: #4e362d;
+			font-size:12px;
+			font-style:italic;
+		}
+
+		.table-container {
+			margin: 0px auto;
+			width: 620px;
+			background-color: #fff;
+		}
+
+		.product-table-container {
+			margin: 0px auto;
+			width: 620px;
+			background: #F9CA44;
+		}
+
+		.logo-container {
+			width: 620px;
+			height: 77px;
+			margin: 0px auto;
+			padding: 0px;
+			
+			text-align: center;
+		}
+
+		.table-menu {
+			width: 520px;
+			background-color: #fff;
+			text-align: center;
+			font-size: 11px;
+			font-weight: bold;
+			margin: 0px auto;
+		}
+
+		.link {
+			font-family: 'GillSans Light', 'GillSans', 'Helvitica Neue', Arial;
+			text-decoration: none;
+			color: #222;
+			line-height: 2em;
+			font-weight:bold;
+		}
+
+		.table-title {
+			width: 520px;
+			padding-top: 30px;
+			background-color: #fff;
+			margin: 0px auto;
+			font-family: 'GillSans Light', 'GillSans', 'Helvitica Neue', Arial;
+		}
+
+		.table-title {
+			text-align: center;
+		}
+
+		.title-img {
+			width: 100%;
+		}
+
+		.title-text {
+			font-family: 'GillSans Light', 'GillSans', 'Helvitica Neue', Arial;
+			font-weight: bold;
+			text-transform: uppercase;
+			text-align: center;
+			padding: 0px 60px;
+			color: #a5958f;
+			margin: 0px auto;
+			font-size: 30px;
+		}
+
+		.message-text {
+			font-family: 'GillSans Light', 'GillSans', 'Helvitica Neue', Arial;
+			padding-top: 10px 80px;
+			color: gray;
+			margin: 0px 50px;
+			text-align: center;
+			line-height: 2em;
+			font-size: 16px;
+			color: #4c362e;
+		}
+
+		.message-text-bold {
+			font-family: 'GillSans Light', 'GillSans', 'Helvitica Neue', Arial;
+			padding-bottom: 20px;
+			font-size: 16px;
+			font-weight: 800;
+			color: #4c362e;
+			text-align: center;
+			margin-top: 5px;
+		}
+
+		.table-product {
+			/*height: 340px;*/
+			width: 600px;
+			margin: 0px auto;
+		}
+
+		.offer-top-text {
+			font-family: 'GillSans Light', 'GillSans', 'Helvitica Neue', Arial;
+			text-transform: uppercase;
+			font-size: 18px;
+			color: #4e362d;
+			text-align: center;
+			margin: 0px;
+			line-height: 60px;
+		}
+
+		.table-offer {
+			width: 530px;
+			background: #fff url('http://i.imgur.com/i3g4OFZ.png') no-repeat center center;
+			text-align: center;
+			margin: 0px auto;
+		}
+
+		.offer-title {
+			font-family: 'GillSans Light', 'GillSans', 'Helvitica Neue', Arial;
+			margin-top: 15px;
+			font-weight: bold;
+			text-transform: uppercase;
+			text-align: center;
+			font-size: 36px;
+			padding-bottom: 0px;
+		}
+
+		.offer-sub {
+			font-family: 'GillSans Light', 'GillSans', 'Helvitica Neue', Arial;
+			text-align: center;
+			text-transform: uppercase;
+			padding-top: 5px 100px;
+			padding-bottom: 0px;
+			font-size: 20px;
+		}
+
+		.offer-text {
+			font-family: 'GillSans Light', 'GillSans', 'Helvitica Neue', Arial;
+			text-align: center;
+			padding: 5px 100px;
+			font-size: 18px;
+			color: #4e362d;
+		}
+
+		.line {
+			width: 60%;
+			border: none;
+			height: 1px;
+			background-color: #000;
+			margin: 10px auto 15px;
+		}
+
+		.offer-term-text {
+			font-size: 10px;
+			padding: 20px;
+			font-family: 'GillSans Light', 'GillSans', 'Helvitica Neue', Arial;
+		}
+
+		.content-container {
+			width: 520px;
+			margin: 0px auto;
+		}
+
+		.text-wish {
+			text-align: center;
+			padding: 30px 60px;
+			color: #4c362e;
+			font-size: 18;
+			font-family: 'GillSans Light', 'GillSans', 'Helvitica Neue', Arial;
+		}
+
+		.text-c {
+			text-align: center;
+			padding: 0px 60px;
+			color: #4c362e;
+			font-size: 20px;
+			font-family: 'GillSans Light', 'GillSans', 'Helvitica Neue', Arial;
+		}
+
+		.terms-text {
+			text-align: center;
+			padding: 15px 60px;
+			color: #4c362e;
+			font-size: 10px;
+			font-family: 'GillSans Light', 'GillSans', 'Helvitica Neue', Arial;
+		}
+
+		.terms-text-first {;
+			padding-top: 30px;
+		}
+
+		.terms-text-last {
+			padding-bottom: 40px;
+		}
+
+		.bottom-content-container {
+			width: 620px;
+			margin: 0px auto;
+		}
+
+		.table-bottem-content {
+			margin: 0 auto 20px auto;
+		}
+
+		.social-img {
+			text-align: center;
+			text-transform: uppercase;
+			font-size: 12px;
+			font-weight: bold;
+			font-family: 'GillSans Light', 'GillSans', 'Helvitica Neue', Arial;
+
+		}
+
+		.product-name {
+			color: #4c362e;
+			font-family: 'GillSans Light', 'GillSans', 'Helvitica Neue', Arial;
+			text-align: center;
+			font-size: 28px;
+			text-transform: uppercase;
+			font-weight: bold;
+			padding-top: 10px;
+		}
+
+		.product-desp {
+			color: #4c362e;
+			font-family: 'GillSans Light', 'GillSans', 'Helvitica Neue', Arial;
+			text-align: center;
+			font-weight: 300;
+			font-size: 20px;
+			margin-bottom:15px;
+		}
+
+		.product-mes {
+			font-family: 'GillSans Light', 'GillSans', 'Helvitica Neue', Arial;
+			text-align: center;
+			font-size: 15px;
+			text-transform: uppercase;
+			color: #4c362e;
+			margin-bottom:15px;
+		}
+
+		.product-loc {
+			font-family: 'GillSans Light', 'GillSans', 'Helvitica Neue', Arial;
+			font-size: 16px;
+			font-weight: 800;
+			text-align: center;
+			color: #4c362e;
+		}
+
+		.product-notif {
+			font-family: 'GillSans Light', 'GillSans', 'Helvitica Neue', Arial;
+			color: #4c362e;
+			font-size: 14px;
+			text-align: center;
+			padding: 5px 0px;
+		}
+
+		.product-notif-last {
+			font-family: 'GillSans Light', 'GillSans', 'Helvitica Neue', Arial;
+			color: #4c362e;
+			font-size: 14px;
+			text-align: center;
+			padding-bottom: 10px;
+		}
+
+		.footer-content {
+			font-family: 'GillSans Light', 'GillSans', 'Helvitica Neue', Arial;
+			font-size: 10px;
+			font-weight: bold;
+			text-align: center;
+			padding-bottom: 15px;
+		}
+
+		.footer-content-1 {
+			font-family: 'GillSans Light', 'GillSans', 'Helvitica Neue', Arial;
+			font-size: 10px;
+			text-align: center;
+			padding-bottom: 15px;
+		}
+
+		.footer-content-2 {
+			font-family: 'GillSans Light', 'GillSans', 'Helvitica Neue', Arial;
+			font-size: 10px;
+			text-align: center;
+			padding-bottom: 15px;
+		}
+	</style>
+
+</head>
+<body style="width: 620px; margin: 0 auto;padding: 0;background-color: #F2F0EC;font-family: 'GillSans Light', 'GillSans', 'Helvitica Neue', Arial;">
+<p class="top-link" style="margin: 60px 0 15px 0;text-align: center;color: #4e362d;font-size: 12px;font-style: italic;">if you have trouble viewing this email please <a href="#">click here</a></p>
+<div style="text-align:center;">
+<div style="width: 620px; margin: 0px auto; display:inline-block; text-align:center;">
+<div class="logo-container" style="width: 620px;height: 77px;margin: 0px auto;padding: 0px;text-align: center; font-size:0px;">
+	<img src="http://i.imgur.com/bWqx00P.jpg" width="620px" alt="Loccitane Logo">
+</div>
+<div class="table-container" bgcolor="#fff" style="width: 620px; margin: 0px auto;padding: 0px;background-color: #fff;text-align: center;
+">
+
+	<table class="table-menu" border="0" cellpadding="0" cellspacing="0" width="520" style="width: 520px;background-color: #fff;text-align: center;font-size: 11px;font-weight: bold;margin: 0 auto; display:inline;">
+		<tr>
+			<td><a href="#" class="link" style="font-family: 'GillSans Light', 'GillSans', 'Helvitica Neue', Arial;text-decoration: none;color: #222;line-height: 2em;font-weight: bold;">NEW <img height="8" width="7" style="height:7px; width:7px;" src="http://i.imgur.com/k6Lmqig.png" alt=""></a></td>
+			<td><a href="#" class="link" style="font-family: 'GillSans Light', 'GillSans', 'Helvitica Neue', Arial;text-decoration: none;color: #222;line-height: 2em;font-weight: bold;">CUSTOMER FAVOURITES <img height="8" width="7" style="height:7px; width:7px;" src="http://i.imgur.com/k6Lmqig.png" alt=""></a></td>
+			<td><a href="#" class="link" style="font-family: 'GillSans Light', 'GillSans', 'Helvitica Neue', Arial;text-decoration: none;color: #222;line-height: 2em;font-weight: bold;">FACE CARE <img height="8" width="7" style="height:7px; width:7px;" src="http://i.imgur.com/k6Lmqig.png" alt=""></a></td>
+			<td><a href="#" class="link" style="font-family: 'GillSans Light', 'GillSans', 'Helvitica Neue', Arial;text-decoration: none;color: #222;line-height: 2em;font-weight: bold;">BODY CARE <img height="8" width="7" style="height:7px; width:7px;" src="http://i.imgur.com/k6Lmqig.png" alt=""></a></td>
+			<td><a href="#" class="link" style="font-family: 'GillSans Light', 'GillSans', 'Helvitica Neue', Arial;text-decoration: none;color: #222;line-height: 2em;font-weight: bold;">HAIR CARE <img height="8" width="7" style="height:7px; width:7px;" src="http://i.imgur.com/k6Lmqig.png" alt=""></a></td>
+			<td><a href="#" class="link" style="font-family: 'GillSans Light', 'GillSans', 'Helvitica Neue', Arial;text-decoration: none;color: #222;line-height: 2em;font-weight: bold;">FRAGRANCE <img height="8" width="7" style="height:7px; width:7px;" src="http://i.imgur.com/k6Lmqig.png" alt=""></a></td>
+		</tr>
+	</table>
+<table border="0" cellpadding="0" cellspacing="0" width="520px" style="width: 520px;margin: 0px auto;font-family: 'GillSans Light', 'GillSans', 'Helvitica Neue', Arial;text-align: center; display:inline-block; background-color:#fff; ">
+	<table class="table-title" border="0" cellpadding="0" cellspacing="0" width="520" style="width: 520px;padding-top: 30px; padding-bottom:0px;background-color: #fff;margin: 0px auto;font-family: 'GillSans Light', 'GillSans', 'Helvitica Neue', Arial;text-align: center; display:inline-block;">
+		<tr>
+			<td><img src="http://i.imgur.com/JLiKh0Z.png" class="title-ig" alt="top"></td>
+		</tr>
+
+		<tr>
+			<td><p class="title-text" style="margin: 0px auto;font-family: 'GillSans Light', 'GillSans', 'Helvitica Neue', Arial;font-weight: bold;text-transform: uppercase;text-align: center;padding: 0px 60px;color: #a5958f;font-size: 30px;"><span style="font-weight:normal;">DEAR CAROLINE,</span><br> START YOUR FREE
+					<br />SKINCARE TRIAL TODAY</p></td>
+		</tr>
+
+		<tr>
+			<td><img src="http://i.imgur.com/p5l4dDP.png" class="title-ig" alt="bottom"></td>
+		</tr>
+		<tr>
+			<td>
+				<p class="message-text" style="margin: 0px 50px;font-family: 'GillSans Light', 'GillSans', 'Helvitica Neue', Arial;padding-top: 10px 80px;color: #4c362e;text-align: center;line-height: 2em;font-size: 16px;">Thank you for completing our online personal skincare <br /> diagnosis. Simply print or
+					show this email in store <br /> to collect your free 8ml moisturiser.</p>
+
+				<p class="message-text-bold" style="margin: 0px;font-family: 'GillSans Light', 'GillSans', 'Helvitica Neue', Arial;padding-bottom: 20px;font-size: 16px;font-weight: 800;color: #4c362e;text-align: center;margin-top: 5px;">
+					Hurry! Your 7-day trial is only available while stocks last.
+				</p>
+			</td>
+		</tr>
+	</table>
+</table>
+</div>
+
+<div class="product-table-container" style="width: 620px;margin: 0px auto;background: #F9CA44; text-align: center;">
+	<table class="table-product" border="0" cellpadding="10" cellspacing="0" style="width: 620px;margin: 0px auto; background-color:#F9CA44;">
+		<tr>
+			<td width="40%">
+				<img src="http://i.imgur.com/oZTWP3F.png" class="product-img" alt="product" width="250" height="250" style="margin-left:20px;">
+			</td>
+			<td style="width:60%; text-align:center">
+				<p class="product-name" style="margin: 0px;color: #4c362e;font-family: 'GillSans Light', 'GillSans', 'Helvitica Neue', Arial;text-align: center;font-size: 28px;text-transform: uppercase;font-weight: bold;padding-top: 20px;">divine cream</p>
+
+				<p class="product-desp" style="margin: 0px;color: #4c362e;font-family: 'GillSans Light', 'GillSans', 'Helvitica Neue', Arial;text-align: center;font-weight: 300;font-size: 20px;margin-bottom: 15px;">- Ultimate Anti-ageing -</p>
+
+				<p class="product-mes" style="margin: 0px;font-family: 'GillSans Light', 'GillSans', 'Helvitica Neue', Arial;text-align: center;font-size: 15px;text-transform: uppercase;color: #4c362e;margin-bottom: 15px;">your selected loccitane botique:</p>
+
+				<p class="product-loc" style="margin: 0px;font-family: 'GillSans Light', 'GillSans', 'Helvitica Neue', Arial;font-size: 16px;font-weight: 800;text-align: center;color: #4c362e;">Regent Street</p>
+
+				<p style="text-align: center;font-size: 16px;color: #4c362e;margin: 0px;margin-bottom: 15px;">149 Regent street,
+					<span style="text-decoration:underline">London WIB 4jd </span></p>
+				<img src="http://i.imgur.com/7VcQt2z.jpg" alt="Bar code" style="margin:0 auto 10px auto;">
+
+				<p class="product-notif" style="margin: 0px;font-family: 'GillSans Light', 'GillSans', 'Helvitica Neue', Arial;color: #4c362e;font-size: 13px;text-align: center;padding: 5px 0px;">Remember to collect your free 8ml</p>
+
+				<p class="product-notif-last" style="margin: 0px;font-family: 'GillSans Light', 'GillSans', 'Helvitica Neue', Arial;color: #4c362e;font-size: 14px;text-align: center;padding-bottom: 20px;">moisturiser by <span style="font-weight:bold;">2nd november, 2015</span>
+				</p>
+			</td>
+		</tr>
+	</table>
+</div>
+<div class="table-container" style="width: 620px;margin: 0px auto;text-align: center; padding-bottom: 20px;background-color:#fff;">
+	<table class="table-solution-for-overflowing-paragraph" style="width:620px; margin: 0px auto; background-color:#fff;text-align:center;">
+		<p class="offer-top-text" style="font-family: 'GillSans Light', 'GillSans', 'Helvitica Neue', Arial;text-transform: uppercase;font-size: 18px;color: #4e362d;line-height: 60px; ">Exclusively for you!</p>
+	</table>
+	<table class="table-solution-for-overflowing-paragraph" cellpadding="0" cellspacing="0" border="0" width="520px" style="width:520px; margin:0px auto; text-align:center;background-color:#fff;display:inline-block; table-layout:fixed; border-collapse: collapse; font-size:0px;">
+	  <tr style="font-size:0px;">
+	  <td colspan="3">
+	    		<img class="top-image" src="http://i.imgur.com/3LHgAH3.png" style="width:525px; height:30px;" alt="">
+		</td>
+	    
+	  </tr>
+	  <tr>
+	    <td class="side-image" rowspan="2"><img src="http://i.imgur.com/MIcSOoD.png" alt="" style="height:102%;width:2px;"></td>
+	    <td class="tg-031e" rowspan="2">
+	    		<table class="table-offer" border="0" cellpadding="0" cellspacing="0" width="520" style="width: 520px; background: #fff; text-align: center;margin: 0px auto;">
+					<tr>
+						<td>
+			
+							<p class="offer-title" style="margin: 0px;font-family: 'GillSans Light', 'GillSans', 'Helvitica Neue', Arial;margin-top: 15px;font-weight: bold;text-transform: uppercase;text-align: center;font-size: 36px;padding-bottom: 0px;">&pound;10 off skin care</p>
+				
+							<p class="offer-sub" style="margin: 0px;font-family: 'GillSans Light', 'GillSans', 'Helvitica Neue', Arial;text-align: center;text-transform: uppercase;padding-top: 5px 100px;padding-bottom: 0px;font-size: 20px;">when you spend &pound;25 or more</p>
+							<hr class="line" style="width: 60%;border: none;height: 1px;background-color: #000;margin: 10px auto 15px;">
+							<p class="offer-text" style="margin: 0px;font-family: 'GillSans Light', 'GillSans', 'Helvitica Neue', Arial;text-align: center;padding: 5px 100px;font-size: 18px;color: #4e362d;">you will receive your exclusive offer on collection of your 7-day trial
+								instore</p>
+				
+							<p class="offer-term-text" style="margin: 0px;font-size: 10px;padding: 20px;font-family: 'GillSans Light', 'GillSans', 'Helvitica Neue', Arial;">*Terms and condtions apply</p>
+							
+						
+						</td>
+					</tr>
+				</table>
+	    </td>
+	    <td class="side-image" rowspan="2"><img src="http://i.imgur.com/MIcSOoD.png" alt="" style="height:102%; width:2px;"></td>
+	  </tr>
+	  <tr style="font-size:0px;">
+	  </tr>
+	  <tr style="font-size:0px;">
+	    <td colspan="3">
+	    	<img class="bottom-image" src="http://i.imgur.com/sJaAHaF.png" style="width:525px; height:30px;" alt="">
+	    </td>
+	  </tr>
+	</table>
+	<div class="content-container" style="width: 620px;margin: 0px auto; text-align:center;">
+		<table class="table-solution-for-overflowing-paragraph" style="width: 620px;margin: 0px auto; background-color:#fff; text-align:center;">
+		<p class="text-wish" style="margin: 0px;text-align: center;padding: 30px 60px;color: #4c362e;font-size: 18;font-family: 'GillSans Light', 'GillSans', 'Helvitica Neue', Arial;">We look forward to see you in our botique soon!</p>
+
+		<p class="text-c" style="margin: 0px;text-align: center;padding: 0px 60px;color: #4c362e;font-size: 20px;font-family: 'GillSans Light', 'GillSans', 'Helvitica Neue', Arial;">Best wishes</p>
+
+		<p class="text-c" style="margin: 0px;text-align: center;padding: 0px 60px;color: #4c362e;font-size: 20px;font-family: 'GillSans Light', 'GillSans', 'Helvitica Neue', Arial;">LOCCITANE</p>
+
+		<p class="terms-text terms-text-first" style="margin: 0px;text-align: center;padding: 5px 60px;color: #4c362e;font-size: 10px;font-family: 'GillSans Light', 'GillSans', 'Helvitica Neue', Arial;padding-top: 30px;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. In molestiae
+			laborum voluptatum nobis praesentium consequuntur sunt quidem odio necessitatibus, eligendi placeat, minima
+			itaque aperiam enim dolore veniam officia velit at.</p>
+
+		<p class="terms-text terms-text-last" style="margin: 0px;text-align: center;padding: 15px 60px;color: #4c362e;font-size: 10px;font-family: 'GillSans Light', 'GillSans', 'Helvitica Neue', Arial;padding-bottom: 40px;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo aliquam,
+			ratione deserunt reprehenderit amet dignissimos inventore a, sit soluta vero veritatis, ducimus labore
+			sapiente? Aut iusto id, sint vel omnis.</p>
+	 	</table>
+	</div>
+</div>
+
+<div class="bottom-content-container" style="width: 620px;margin: 0px auto; text-align: center;">
+	<table class="table-bottem-content" border="0" cellpadding="0" cellspacing="0" width="620" style="margin: 0 auto 20px auto;">
+		<tr>
+			<td><img src="http://i.imgur.com/7hgKr9W.jpg" alt="Social icons" width="620px"></td>
+		</tr>
+	</table>
+</div>
+<div class="bottom-content-container" style="width: 620px;margin: 0px auto; text-align: center;">
+<table border="0" style="width:620px; margin:0px auto; text-align:center;" cellpadding="10" cellspacing="0">
+	<tr>
+		<td>
+			<p class="footer-content" style="margin: 0px;font-family: 'GillSans Light', 'GillSans', 'Helvitica Neue', Arial;font-size: 10px;font-weight: bold;text-align: center;padding-bottom: 15px;">Our customer service team is here to help you on 0800368 9000 - Monday to Friday
+				9am to 5.30pm (excluding Bank Holidays).
+				contact us by email or visit our <a href="#">Customer Service page</a>
+				24h/7days to find answer to most frequently asked questions.
+			</p>
+
+			<p class="footer-content-1" style="margin: 0px;font-family: 'GillSans Light', 'GillSans', 'Helvitica Neue', Arial;font-size: 10px;text-align: center;padding-bottom: 15px;">
+				Please add email address <a href="#">contact.en-uk@loccitane.com</a> to your address book to ensure
+				delivery to your inbox
+			</p>
+
+			<p class="footer-content-2" style="margin: 0px;font-family: 'GillSans Light', 'GillSans', 'Helvitica Neue', Arial;font-size: 10px;text-align: center;padding-bottom: 15px;">This email was sent to <a href="#">abc@example.com</a>.
+				If you don't want to receive these messages in the future, please <a href="#">unsubscribe</a> from
+				L'Occitane emails at any time.
+
+			</p>
+		</td>
+	</tr>
+</table>
+</div>
+</div>
+</div>
+</body>
+</html>
