@@ -4,4 +4,5 @@
 https://gamier.co.uk/blog/photoswipe-and-slick-gallery-with-a-nice-lightbox/
 
 # Support me
-<a href="https://www.buymeacoffee.com/zLbATnCyB" target="_blank"><img src="https://bmc-cdn.nyc3.digitaloceanspaces.com/BMC-button-images/custom_images/orange_img.png" alt="Buy Me A Coffee" style="height: auto !important;width: auto !important;" ></a>
+[Buy Me A Coffee](https://www.buymeacoffee.com/zLbATnCyB)
+![Buy Me A Coffee](https://bmc-cdn.nyc3.digitaloceanspaces.com/BMC-button-images/custom_images/orange_img.png "Buy Me A Coffee")
