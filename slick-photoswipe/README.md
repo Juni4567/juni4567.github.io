@@ -3,6 +3,5 @@
 # Full article with step by step guide is on the following url
 https://gamier.co.uk/blog/photoswipe-and-slick-gallery-with-a-nice-lightbox/
 
-# Support me
+# Support my work
 [Buy Me A Coffee](https://www.buymeacoffee.com/zLbATnCyB)
-![Buy Me A Coffee](https://bmc-cdn.nyc3.digitaloceanspaces.com/BMC-button-images/custom_images/orange_img.png "Buy Me A Coffee")
