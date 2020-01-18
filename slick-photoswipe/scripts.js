@@ -94,12 +94,12 @@ $(document).ready(function(){
 
         // find index of clicked item by looping through all child nodes
         // alternatively, you may define index via data- attribute
-        var clickedGallery = clickedListItem.parentNode,
+        var clickedGallery = clickedListItem.parentNode.parentNode.parentNode.parentNode.parentNode,
             childNodes = clickedListItem.parentNode.childNodes,
             numChildNodes = childNodes.length,
             nodeIndex = 0,
             index;
-
+            console.log(clickedGallery);
         for (var i = 0; i < numChildNodes; i++) {
             if(childNodes[i].nodeType !== 1) { 
                 continue; 
@@ -236,37 +236,13 @@ $(document).ready(function(){
 // execute above function
 initPhotoSwipeFromDOM('#SlickPhotoswipGallery');
 $("#SlickPhotoswipGallery").slick({
-                    // dots: bigBenOptions.gallery.dots,
-                    // arrows: bigBenOptions.gallery.arrows,
-                    // rows: bigBenOptions.gallery.rows,
-                    // speed: bigBenOptions.gallery.speed,
-                    // infinite: bigBenOptions.gallery.infinite,
-                    // centerMode: bigBenOptions.gallery.centerMode,
-                    // slidesToShow: bigBenOptions.gallery.slidesToShow,
-                    // slidesToScroll: bigBenOptions.gallery.slidesToScroll,
-                    // prevArrow: bigBenOptions.gallery.prevArrow,
-                    // nextArrow: bigBenOptions.gallery.nextArrow,
-                    // responsive: bigBenOptions.gallery.responsive,
-                    // customPaging: bigBenOptions.gallery.customPaging,
-
                     dots: true,
-                    // shows/hides left/right arrow
                     arrows: true,
-                    // if set will show custom carousel paging e.g. by default it shows number instead of dots
-                    // customPaging : function(slider, i) {
-                    // return '<a>'+(i+1)+'</a>';
-                    // },
-                    // Number of rows to show in the carousel
                     rows: 2,
-                    // defines the speed of carousel slide
                     speed: 300,
-                    // if set the carousel will always be slid to first slide if no slide left
                     infinite: false,
-                    // active slide will be centered if true
                     centerMode: false,
-                    // How many slides per row
                     slidesToShow: 3,
-                    // How many slides to scroll on slide left or right mostly equals to slidesToShow 
                     slidesToScroll: 3,
                     prevArrow: '<div class="slick-prev"><i class="i-chev-left-thin"></i><span class="sr-text">Previous</span></div>',
                     nextArrow: '<div class="slick-next"><i class="i-chev-right-thin"></i><span class="sr-text">Next</span></div>',
