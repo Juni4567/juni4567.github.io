@@ -82,7 +82,8 @@ $(document).ready(function() {
             e.preventDefault ? e.preventDefault() : e.returnValue = false;
 
             var eTarget = e.target || e.srcElement;
-
+            var currentSlideIndex = eTarget.parentNode.parentNode.dataset.slideid;
+            // console.log(currentSlideIndex)
             // find root element of slide
             var clickedListItem = closest(eTarget, function(el) {
                 return (el.tagName && el.tagName.toUpperCase() === 'FIGURE');
@@ -99,24 +100,24 @@ $(document).ready(function() {
                 numChildNodes = childNodes.length,
                 nodeIndex = 0,
                 index;
-            console.log(clickedGallery);
-            for (var i = 0; i < numChildNodes; i++) {
-                if (childNodes[i].nodeType !== 1) {
-                    continue;
-                }
+            // console.log(clickedGallery);
+            // for (var i = 0; i < numChildNodes; i++) {
+            //     if (childNodes[i].nodeType !== 1) {
+            //         continue;
+            //     }
 
-                if (childNodes[i] === clickedListItem) {
-                    index = nodeIndex;
-                    break;
-                }
-                nodeIndex++;
-            }
+            //     if (childNodes[i] === clickedListItem) {
+            //         index = nodeIndex;
+            //         break;
+            //     }
+            //     nodeIndex++;
+            // }
 
 
 
-            if (index >= 0) {
+            if (currentSlideIndex >= 0) {
                 // open PhotoSwipe if valid index found
-                openPhotoSwipe(index, clickedGallery);
+                openPhotoSwipe(currentSlideIndex, clickedGallery);
             }
             return false;
         };
@@ -150,6 +151,7 @@ $(document).ready(function() {
         };
 
         var openPhotoSwipe = function(index, galleryElement, disableAnimation, fromURL) {
+            // console.log("Index passed to openPhotoSwipe is ",index);
             var pswpElement = document.querySelectorAll('.pswp')[0],
                 gallery,
                 options,
@@ -191,7 +193,8 @@ $(document).ready(function() {
                     options.index = parseInt(index, 10) - 1;
                 }
             } else {
-                options.index = parseInt(index, 10);
+                // console.log("index passed to photoswipe options",index)
+                options.index = parseInt(index);
             }
 
             // exit if index not found
@@ -205,13 +208,13 @@ $(document).ready(function() {
 
             /*  Extension to photoswipe. 
                 Set index with item.start */
-            for (var findInd = 0; findInd < items.length; findInd++) {
-                if (items[findInd].start) {
-                    options.index = findInd;
-                    break;
-                }
-            }
-
+            // for (var findInd = 0; findInd < items.length; findInd++) {
+            //     if (items[findInd].start) {
+            //         options.index = findInd;
+            //         break;
+            //     }
+            // }
+            // console.log(options);
             // Pass data to PhotoSwipe and initialize it
             gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, options);
             gallery.init();
